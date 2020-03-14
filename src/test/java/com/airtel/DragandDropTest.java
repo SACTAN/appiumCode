@@ -23,15 +23,14 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import org.testng.annotations.Test;
 
 class DragandDrop {
 
     public static AndroidDriver<WebElement> driver;
 
-
-    public static void main(String[] args) throws MalformedURLException {
-
-
+    @Test
+    public static void automationTest() throws MalformedURLException {
         File app = new File(".\\app\\com.mobeta.android.demodslv.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
