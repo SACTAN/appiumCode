@@ -34,11 +34,14 @@ class AppTest {
         File app = new File(".\\app\\com.mobeta.android.demodslv.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "3551b5500104");
 
-        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+       // capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        capabilities.setCapability(MobileCapabilityType.APP, "c://Users//SACHIN//Downloads//com.mobeta.android.demodslv.apk");
 
-        driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+        //driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+        driver = new AndroidDriver<WebElement>(new URL("http://192.168.0.6:4723/wd/hub"),capabilities);
         driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
 
 
